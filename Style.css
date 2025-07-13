@@ -1,0 +1,213 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+:after {
+	content: "";
+}
+
+section {
+    position: relative;
+    width: 80vw;
+    height: fit-content;
+    padding: 20px;
+    left: 15vw;
+    background-color: rgb(150, 110, 110);
+    border-radius: 50px;
+    border: 5px solid #DC143C;
+    text-align: center;
+}
+
+h1 { 
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 52px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #DC143C,
+	2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #DC143C,
+	1px 1px 0px #DC143C,
+	2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C;
+}
+
+h3 {
+    text-indent: 4vw;
+    text-align: justify;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 0px #DC143C,
+	1px 1px 0px #DC143C,
+	1px 1px 0px #DC143C,
+	2px 2px 0px #DC143C;
+}
+
+hr {
+    border: 5px solid #DC143C;
+    border-radius: 5px;
+}
+
+body {
+    padding: 50px 0px;
+	background: lightblue;
+    color: white;
+    background-image: url("Assets/Images/Background.jpg");
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+    line-height:1.4;
+}
+
+.Circle_Pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #DC143C;
+    margin-bottom: 5px;
+}
+.Square_Pic {
+    width: 1200px;
+    height: 600px;
+    border: 5px solid #DC143C;
+    margin-bottom: 5px;
+}
+
+nav {
+    float: left;
+	position: relative;
+	top: 0;
+    left: 0;
+	background: transparent;
+}
+
+nav ul {
+	text-align: center;
+}
+
+nav ul li {
+	position: relative;
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+	background: crimson;
+	text-transform: uppercase;
+	transition:all .4s ease-out;
+}
+
+nav ul li:after {
+	position: absolute;
+	background: lightblue;
+	color: crimson;
+	top:0;
+	left: 170px;
+	width: 170px; height: 100%;
+    opacity:0;
+    transform: perspective(170px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
+}
+
+nav ul li:nth-child(1):after { 
+	content: "Home";
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 0px #DC143C,
+    2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+    text-align: center;
+    align-content: center;
+}
+nav ul li:nth-child(2):after { 
+	content: "About Me";
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 0px #DC143C,
+    2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+    text-align: center;
+    align-content: center;
+}
+nav ul li:nth-child(3):after { 
+	content: "Skills";
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 0px #DC143C,
+    2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+    text-align: center;
+    align-content: center;
+}
+nav ul li:nth-child(4):after { 
+	content: "Previous Projects";
+    font-size: 28px;
+    color: white;
+    text-shadow: 1px 1px 0px #DC143C,
+    2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+    text-align: center;
+    align-content: center;
+}
+nav ul li:nth-child(5):after { 
+	content: "Socials";
+    font-size: 33px;
+    color: white;
+    text-shadow: 1px 1px 0px #DC143C,
+    2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+    text-align: center;
+    align-content: center;
+}
+
+.Nav_Icon {
+    -webkit-filter:invert(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+}
+
+.Icon {
+    -webkit-filter:invert(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+}
+
+a {
+    color: white;
+}
+
+nav ul li:hover{
+	transform: translateX(-170px);
+}
+
+nav ul li:hover:after, li.active {
+    opacity: 1;
+	transform: perspective(170px) rotateY(0deg) scale(1) ;
+}
+
+
+nav ul li > div {
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+nav ul li { position: relative; }
